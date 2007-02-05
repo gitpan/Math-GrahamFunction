@@ -1,27 +1,30 @@
 ---
 name: Math-GrahamFunction
-version: 0.01
+version: 0.01001
 author:
   - 'Shlomi Fish <shlomif@cpan.org>'
-abstract: "Calculate the Graham's Function of a Natural \nNumber."
+abstract: |-
+  Calculate the Graham's Function of a Natural 
+  Number.
 license: bsd
-build_requires:
+resources:
+  license: http://www.opensource.org/licenses/bsd-license.php
+requires:
   Class::Accessor: 0
   List::Util: 0
+build_requires:
   Test::More: 0
-generated_by: Module::Build version 0.2805
-meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.2.html
-  version: 1.2
 provides:
   Math::GrahamFunction:
     file: lib/Math/GrahamFunction.pm
-    version: 0.01
+    version: 0.01001
   Math::GrahamFunction::Object:
     file: lib/Math/GrahamFunction/Object.pm
   Math::GrahamFunction::SqFacts:
     file: lib/Math/GrahamFunction/SqFacts.pm
   Math::GrahamFunction::SqFacts::Dipole:
     file: lib/Math/GrahamFunction/SqFacts/Dipole.pm
-resources:
-  license: http://www.opensource.org/licenses/bsd-license.php
+generated_by: Module::Build version 0.2805
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2

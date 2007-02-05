@@ -14,7 +14,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.01001';
 
 use base qw(Math::GrahamFunction::Object);
 
@@ -449,6 +449,13 @@ sub _main_solve
 
 Shlomi Fish, C<< <shlomif at cpan.org> >>
 
+=head1 KNOWN BUGS
+
+The module may yield different sequences with its "factor in between"
+optimization than without it. The last number (= the Graham function)
+is the same, but the numbers in between are different. A future release
+will provide a flag to disable that optimization.
+
 =head1 BUGS
 
 Please report any bugs or feature requests to
@@ -492,6 +499,13 @@ The latest source for this module is available from its subversion repository:
 L<http://svn.berlios.de/svnroot/repos/web-cpan/Math-GrahamFunction/trunk>
 
 =head1 ACKNOWLEDGEMENTS
+
+Mark Jason Dominus ( L<http://perl.plover.com/> ) for the original Graham
+Function Quiz-of-the-Week.
+
+imacat (L<http://www.imacat.idv.tw/>) and David Golden for helping me
+debug a CPAN smoking failure with installing this module on imacat's
+computer.
 
 =head1 COPYRIGHT & LICENSE
 
