@@ -1,10 +1,13 @@
 use strict;
 use warnings;
-use Module::Build;
 
-my $builder = Module::Build->new(
+use lib './inc';
+
+use Test::Run::Builder;
+
+my $builder = Test::Run::Builder->new(
     module_name         => 'Math::GrahamFunction',
-    license             => 'bsd',
+    license             => 'mit',
     dist_author         => 'Shlomi Fish <shlomif@cpan.org>',
     dist_version_from   => 'lib/Math/GrahamFunction.pm',
     build_requires => {
@@ -15,6 +18,34 @@ my $builder = Module::Build->new(
         'List::Util' => 0,
     },
     add_to_cleanup      => [ 'Math::GrahamFunction-*' ],
+    meta_merge =>
+    {
+        resources =>
+        {
+            repository => "http://svn.berlios.de/svnroot/repos/web-cpan/Math-GrahamFunction/trunk/modules/Math-GrahamFunction",
+        },
+        keywords =>
+        [
+            "factors",
+            "fun",
+            "function",
+            "graham",
+            "math",
+            "mathematics",
+            "maths",
+            "mjd",
+            "obscure",
+            "pure-perl",
+            "riddle",
+            "riddles",
+            "quizzes",
+            "qotw",
+            "quiz",
+            "quiz-of-the-week",
+            "square",
+            "week",
+        ],
+    },
 );
 
 $builder->create_build_script();
