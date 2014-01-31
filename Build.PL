@@ -10,19 +10,21 @@ my $builder = Test::Run::Builder->new(
     license             => 'mit',
     dist_author         => 'Shlomi Fish <shlomif@cpan.org>',
     dist_version_from   => 'lib/Math/GrahamFunction.pm',
+    configure_requires => { 'Module::Build' => '0.39', },
     build_requires => {
         'Test::More' => 0,
     },
     requires => {
         'Class::Accessor' => 0,
         'List::Util' => 0,
+        'perl' => '5.008',
     },
     add_to_cleanup      => [ 'Math::GrahamFunction-*' ],
     meta_merge =>
     {
         resources =>
         {
-            repository => "http://svn.berlios.de/svnroot/repos/web-cpan/Math-GrahamFunction/trunk/modules/Math-GrahamFunction",
+            repository => "https://bitbucket.org/shlomif/perl-math-grahamfunction/",
         },
         keywords =>
         [
